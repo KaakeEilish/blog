@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding-top: 32px;
+    height: calc(120px + 32px);
+}
+
+header div {
+    background-image: linear-gradient(90deg, #0072Ff 0%, #437D 50.52%, #C71585 100%);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    transition: transform .3s;
+}
+
+header div:hover {
+    transform: scale(1.1);
+}
+
+header img {
+    width: 120px;
+    border-radius: 50%;
+    padding: 4px;
+}
+
+ul {
+    list-style: none;
+}
+
+section ul {
+    display:flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+section ul li {
+    transition: transform .5s;
+}
+
+section ul li:hover {
+    transform: scale(1.1);
+}
+
+.Eleição img {
+    border-radius: 10px;
+    width: 150px;
+    border: 1px solid#443E5A;
+}
+
+.streamers-topi img {
+    border-radius: 50%;
+    width: 70px;
+    border: 1px solid#443E5A;
+}
+
+.animes-topi img {
+    border-radius: 10px;
+    width: 90px;
+    border: 1px solid#443E5A;
+}
+
+.bandas-topi img {
+    border-radius: 10px;
+    width: 150px;
+    border: 1px solid#443E5A;
+}
+
+body {
+    background-image: url(./assets/bg.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: repeat;
+    background-color: #121214;
+}
+
+body::-webkit-scrollbar {
+    width: 10px
+} 
+  
+body::-webkit-scrollbar-thumb {   
+    background-color: #2A2634; 
+    border-radius: 5px;  
+}
+
+body * {
+    font-family: "Inter", sans-serif;
+    line-height: 160%;
+}
+
+main {
+    max-width: 580px;
+    width: 90%;
+    margin: 32px auto;
+    display: grid;
+    gap: 24px;
+}
+
+section {
+    color: white;
+    background-image: linear-gradient(90deg, #191970 0%, 	#778899 50.52%, #4B0082 100%);
+    padding-top: 3px;
+    border-radius: 10px;
+}
+
+section h2 {
+    letter-spacing: -0.47px;
+}
+
+section p {
+    letter-spacing: -0.18px;
+    color: #A1A1AA;
+}
+
+section div {
+    background-color: 	#1a012c;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+
+
+}
+
+/* Animation */
+
+header div {
+    animation: FromTop 1s .3s backwards;
+}
+
+main section {
+    animation: FromBottom 1s .3s backwards;
+}
+
+main section:nth-child(1) {
+    animation-delay: 0s;
+}
+
+main section:nth-child(2) {
+    animation-delay: .3s;
+}
+
+main section:nth-child(3) {
+    animation-delay: .4s;
+}
+
+main section:nth-child(4) {
+    animation-delay: .5s;
+}
+
+main section:nth-child(5) {
+    animation-delay: .6s;
+}
+
+@keyframes FromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px) ;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes FromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
